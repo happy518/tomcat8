@@ -773,6 +773,7 @@ public class ContextConfig implements LifecycleListener {
 	    // tomcat6或者7是没有这个问题的
 	    // 解决方法是在tomcat源码中org.apache.catalina.startup.ContextConfig中手动将JSP初始化。
 	    context.addServletContainerInitializer(new JasperInitializer(), null);
+
         if (!context.getIgnoreAnnotations()) {
             applicationAnnotationsConfig();
         }
